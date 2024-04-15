@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishakapatnam Package</title>
+
+    <style>
+        .title{
+            position: absolute;
+            padding-left: 40%;
+            font-size: 200%;
+        }
+        .maint1{
+
+            padding-top: 8%;
+            font-family: Georgia, 'Times New Roman', ;
+            font-size: 160%;
+            color: rgb(from red 180 80 10);
+            
+        }
+
+        .container{
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .container1{
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .h2{
+            padding-left: 10%;
+        }
+        .t1{
+            font-size: 180%;
+        }
+
+        .ti-sub{
+            font-size: 190%;
+            
+        }
+        .g1{
+           
+            text-align: left;
+            margin-left: 50px;
+        }
+
+        .g2{
+            align-content: right;
+            margin-right: 50px;
+        }
+        .t2{
+            margin-right: 40%;
+        }
+        .g3{
+            align-content: right;
+            margin-left: 50px;
+        }
+        .g4{
+           
+           text-align: left;
+           margin-right: 50px;
+       }
+       #previousPageLink {
+    position: absolute;
+    margin-left: 30%;
+    padding: 10px 20px;
+    margin-top: 6%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#previousPageLink:hover {
+    background-color: #fff;
+}
+
+#bookBtnn {
+    position: absolute;
+    margin-left: 60%;
+    padding: 10px 20px;
+    margin-top: 6%;
+    background-color:#45a049;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#bookBtnn:hover {
+    background-color: #fff;
+}    
+
+    </style>
+</head>
+
+<body>
+    <h2 class="title"><u><label style="color:red">V</label>ishakapatnam</h2></u>
+    <br>
+    <center class="maint1"> Visakhapatnam, commonly known as Vizag, is a coastal city in the state of Andhra Pradesh, India. 
+        It is the largest city in the state and serves as its commercial and administrative hub.</center>
+
+    <div class="container">
+        <div class="g1">
+             <h2 class="t1">Yarada Beach</h2>
+            <label class="t1-sub"> Located around 15 kilometers from Visakhapatnam, Yarada Beach is a pristine 
+               <br><br>and secluded beach offering golden sands, clear waters, and stunning panoramic views 
+               <br><br>of the Bay of Bengal. It's an ideal spot for relaxation and enjoying the sunset.</label>
+        </div>
+        <div class="g2">
+            <img src="Yarada_Beach_view.jpg" width="500px" height="250px" align="right">
+        </div>
+    </div>
+<br>
+<br>
+    <div class="container1">
+        
+                <div class="g3">
+                    <img src="kailasagiri.jpg" width="500px" height="250px" align="left">
+                </div>
+            <div class="g4">
+                 <h2 class="t2">Kailasagiri</h2>
+                <label class="t2-sub">It is Perched atop a hill overlooking Visakhapatnam, 
+                    <br><br>Kailasagiri offers panoramic views of the city and the coastline.
+                    <br><br>It features lush gardens, children's play areas, and an enormous statue
+                    <br><br> of Lord Shiva and Goddess Parvati.</label>
+            </div>
+    </div>
+<br>
+<br>
+<div class="container">
+        <div class="g1">
+             <h2 class="t1">Simhachalam Temple</h2>
+            <label class="t1-sub">It is Located around 16 kilometers from Visakhapatnam,  
+                <br><br>Simhachalam Temple is a famous Hindu shrine dedicated to Lord Narasimha, 
+                <br><br>an incarnation of Lord Vishnu. The temple's architecture and intricate carvings  
+                <br><br>attract devotees and tourists alike.</label>
+        </div>
+            <div class="g2">
+                <img src="simhachalam.jpg" width="500px" height="250px" align="right">
+            </div>
+</div>
+<br>
+<br>
+
+<button id="previousPageLink"></button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var previousPageLink = document.getElementById("previousPageLink");
+    var previousPageURL = "package2.html";
+
+    if (previousPageURL) {
+        var linkElement = document.createElement("a");
+        linkElement.href = previousPageURL;
+        linkElement.textContent = "previous page";
+        previousPageLink.appendChild(linkElement);
+    } else {
+        previousPageLink.textContent = "No previous page detected.";
+    }
+});
+</script>
+
+<button id="bookBtnn"><a href="pg.html">Book Now</a></button>
+
+</body>
+</html>

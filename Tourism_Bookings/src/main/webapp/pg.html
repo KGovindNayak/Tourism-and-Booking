@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateways</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="pg.css">
+
+</head>
+<body>
+    <form>
+    <ol >
+       <div class="btn">
+        <a href="#" class="ord" id="credit-card"><i id="icon" class="fa-solid fa-credit-card"></i>Credit-Card</a>
+        <a href="#" class="ord3" id="net-banking"><i id="icon" class="fa-solid fa-building-columns"></i>Net-Banking</a>
+        <a href="#" class="ord1" id="debit-card"><i id="icon" class="fa-solid fa-credit-card"></i>Debit-Card</a>
+        <a href="#" class="ord2" id="upi"><i id="icon" class="fa-solid fa-angles-right"></i>UPI</a>
+        <a href="#" class="ord4" id="eWallet"><i id="icon" class="fa-solid fa-vault"></i>eWallet</a>
+       </div>
+    </ol>
+</form>
+
+<!-- Credit-card -->
+
+<div class="popup">
+    <div class="popup-content">
+        <div>
+            <i class="fa-solid fa-credit-card larger-icon"></i>
+            <input type="text" id="one" placeholder="Card Number*" required> 
+        </div>
+    
+    <div id="three">
+        <input  id="two" placeholder="MM/YY" required>
+        <input  id="one1" type="password" placeholder='Security Code*' required>
+    </div>
+        <button type="submit" id="one2">  Save Payment & Tokenize </button>
+        <button id="cancel">Cancel</button> 
+    </div>
+</div>
+<script>
+    document.getElementById("credit-card").addEventListener("click",function(event){
+        event.preventDefault(); // Prevent default link behavior
+        document.querySelector(".popup").style.display="flex"; // Show the popup
+    })
+    document.getElementById("cancel").addEventListener("click",function(){
+        document.querySelector(".popup").style.display="none"; // Hide the popup
+    })
+</script>
+
+<!-- Net-Banking -->
+
+<div class="popup1">
+    <div class="popup-content1">
+        <form>
+            <div id="n">
+               <a href="https://retail.onlinesbi.sbi/retail/login.htm" class="net">SBI </a>
+               <a href="https://netbanking.hdfcbank.com/netbanking/"class="net">HDFC Bank</a>
+               <a href="https://www.icicibank.com/personal-banking/insta-banking/internet-banking" class="net">ICICI</a>
+               <!-- <input type="radio" >
+               <select id="dropdown">
+                <option value="option1">Other Banks</option>
+                <option value="option2">Canara Bank</option>
+                <option value="option3">Bank Of Baroda</option> 
+              </select>  -->
+            </div>
+            <button id="cancel1">Cancel</button>
+            </form>
+            <script>
+                const radioButtons = document.querySelectorAll('input[type="radio"]');
+                radioButtons.forEach(button => {
+                  button.addEventListener('click', () => {
+                    radioButtons.forEach(rb => {
+                      if (rb !== button) {
+                        rb.checked = false;
+                      }
+                    });
+                  });
+                });
+            </script>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    document.getElementById("net-banking").addEventListener("click",function(){
+        event.preventDefault(); 
+        document.querySelector(".popup1").style.display="flex";
+    })
+    document.getElementById("cancel1").addEventListener("click",function(){
+        document.querySelector(".popup1").style.display="none";
+    })
+</script>
+
+<!-- Upi -->
+
+<div class="popup2">
+    <div class="popup-content2">
+        <form>
+            <label>Virtual Payment Address<span class="r">*</span></label><br>
+            <input class="i" placeholder="example@bank"><br>
+            <br>
+            or
+            <br>
+            <br>
+            <div class="upi_radio_buttons">
+            <div class="">
+                <input type="radio">Phone pe<br>
+            </div>
+            <input type="radio">Google pay<br>
+            <input type="radio">Paytm
+            </div><br>
+            <button id="pay">Pay</button>
+        </form>
+        <button id="cancel2">Cancel</button>
+    </div>
+</div>
+<script>
+    document.getElementById("upi").addEventListener("click",function(){
+        document.querySelector(".popup2").style.display="flex";
+    })
+    document.getElementById("cancel2").addEventListener("click",function(){
+        event.preventDefault();
+        document.querySelector(".popup2").style.display="none";
+    })
+</script>
+
+
+<!-- eWallet -->
+
+<div class="popup3">
+    <div class="popup-content3">
+<form>
+    <div>
+       <input type="radio" >jio Money
+       <input type="radio" >Mobiwik
+       <input type="radio" >Airtel
+       <select id="dropdown">
+        <option value="option1">Other eWallets</option>
+        <option value="option2">Google pay</option>
+        <option value="option3">Apple pay</option>
+      </select>
+      
+    </div>
+        <p>
+            We'll redirect you to your payment provider's website so you can complete the purchase
+        </p>
+      <button id="cancel3">Cancel</button>
+    </form>
+    <script>
+        const radioButtons1 = document.querySelectorAll('input[type="radio"]');
+        radioButtons1.forEach(button => {
+          button.addEventListener('click', () => {
+            radioButtons1.forEach(rb => {
+              if (rb !== button) {
+                rb.checked = false;
+              }
+            });
+          });
+        });
+    </script>
+    <script>
+        document.getElementById("eWallet").addEventListener("click",function(){
+            event.preventDefault();
+            document.querySelector(".popup3").style.display="flex";
+        })
+        document.getElementById("cancel3").addEventListener("click",function(){
+            document.querySelector(".popup3").style.display="none";
+        })
+    </script>
+    </div>
+</div>
+
+<!-- Debit-card -->
+
+<div class="popup4">
+    <div class="popup-content4">
+       <div>
+        <i class="fa-solid fa-credit-card larger-icon"></i>
+       </div>
+       
+        <div>
+            
+            <input type="text" id="one" placeholder="Card Number*" required>
+            
+        </div>
+    
+    
+    <div id="three">
+        <input  id="two" placeholder="MM/YY*" required>
+        <input  type="password" placeholder='Security Code*' id="one1" required>
+     
+    </div>
+
+    
+        <button type="submit" id="one2">  Save Payment & Tokenize </button>
+        <button id="cancel4">Cancel</button>
+        
+    </div>
+</div>
+<script>
+    document.getElementById("debit-card").addEventListener("click",function(event){
+        event.preventDefault(); // Prevent default link behavior
+        document.querySelector(".popup4").style.display="flex"; // Show the popup
+    })
+    document.getElementById("cancel4").addEventListener("click",function(){
+        document.querySelector(".popup4").style.display="none"; // Hide the popup
+    })
+</script>
+
+
+</body>
+</html>

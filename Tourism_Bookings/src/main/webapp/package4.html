@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araku Package</title>
+
+    <style>
+        .title{
+            position: absolute;
+            padding-left: 40%;
+            font-size: 200%;
+        }
+        .maint1{
+
+            padding-top: 8%;
+            font-family: Georgia, 'Times New Roman', ;
+            font-size: 160%;
+            color: green;
+            
+        }
+
+        .container{
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .container1{
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .h2{
+            padding-left: 10%;
+        }
+        .t1{
+            font-size: 180%;
+        }
+
+        .ti-sub{
+            font-size: 190%;
+            
+        }
+        .g1{
+           
+            text-align: left;
+            margin-left: 50px;
+        }
+
+        .g2{
+            align-content: right;
+            margin-right: 50px;
+        }
+        .t2{
+            margin-right: 40%;
+        }
+        .g3{
+            align-content: right;
+            margin-left: 50px;
+        }
+        .g4{
+           
+           text-align: left;
+           margin-right: 50px;
+       }
+       #previousPageLink {
+    position: absolute;
+    margin-left: 30%;
+    padding: 10px 20px;
+    margin-top: 6%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+}
+
+#previousPageLink:hover {
+    background-color: #fff;
+}
+
+#bookBtnn {
+    position: absolute;
+    margin-left: 60%;
+    padding: 10px 20px;
+    margin-top: 6%;
+    background-color:#4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+}
+
+#bookBtnn:hover {
+    background-color: #fff;
+}
+
+        
+
+    </style>
+
+
+</head>
+
+
+<body>
+    <h2 class="title"><u><label style="color:red">A</label>raku <label style="color:red">V</label>ally</h2></u>
+    <br>
+    <center class="maint1"> Araku Valley, located in the Eastern Ghats of Andhra Pradesh, India, is a picturesque hill station known for 
+        its stunning landscapes, rich tribal culture, and pleasant weather. Here are some of the attractive points and tourist destinations 
+        in Araku Valley:</center>
+
+    <div class="container">
+        <div class="g1">
+             <h2 class="t1">Borra Caves</h2>
+            <label class="t1-sub">It Situated around 29 kilometers from Araku Valley, Borra  Caves is one
+               <br><br>   of the largest caves in the country and is known for  its stunning stalactite
+               <br><br>  and stalagmite formations. The caves are known for their unique formations,
+               <br><br>    stalactites, and stalagmites. They are illuminated with colorful lights,
+               <br><br>  enhancing their beauty.</label>
+        </div>
+        <div class="g2">
+            <img src="borra-cave.jpg" width="500px" height="250px" align="right">
+        </div>
+    </div>
+<br>
+<br>
+    <div class="container1">
+        
+                <div class="g3">
+                    <img src="waterfall.jpg" width="500px" height="250px" align="left">
+                </div>
+            <div class="g4">
+                 <h2 class="t2">Chaparai Waterfalls</h2>
+                <label class="t2-sub">It Situated approximately 15 kilometers from Araku Valley, Chaparai Waterfalls
+                    <br><br> is a picturesque waterfall nestled amidst dense forests. It's a great place to relax
+                    <br><br>  and enjoy nature's beauty. To reach Chaparai Waterfall, visitors typically have to trek
+                    <br><br> through the forested area or drive along winding roads surrounded by lush greenery. The 
+                    <br><br>journey to the waterfall itself is often considered an enjoyable part of the experience.
+                </label>
+            </div>
+    </div>
+<br>
+<br>
+<div class="container">
+        <div class="g1">
+             <h2 class="t1">Ananthagiri Hills</h2>
+            <label class="t1-sub">It About 27 kilometers from Araku Valley, Ananthagiri Hills 
+               <br><br> is a scenic hill station known for its lush greenery, coffee plantations, and 
+                <br><br>serene atmosphere. It's an ideal spot for nature lovers and photographers.</label>
+        </div>
+            <div class="g2">
+                <img src="anantha hills.jpg" width="500px" height="250px" align="right">
+            </div>
+</div>
+<br>
+<br>
+
+<button id="previousPageLink"></button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var previousPageLink = document.getElementById("previousPageLink");
+    var previousPageURL = "package2.html";
+
+    if (previousPageURL) {
+        var linkElement = document.createElement("a");
+        linkElement.href = previousPageURL;
+        linkElement.textContent = "previous page";
+        previousPageLink.appendChild(linkElement);
+    } else {
+        previousPageLink.textContent = "No previous page detected.";
+    }
+});
+</script>
+
+<button id="bookBtnn"><a href="pg.html">Book Now</a></button>
+
+</body>
+</html>

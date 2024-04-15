@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirumala Package</title>
+
+    <style>
+        .title{
+            position: absolute;
+            padding-left: 40%;
+            font-size: 200%;
+        }
+        .maint1{
+
+            padding-top: 8%;
+            font-family: Georgia, 'Times New Roman', ;
+            font-size: 160%;
+            color: rgb(from red 180 80 10);
+            
+        }
+
+        .container{
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .container1{
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .h2{
+            padding-left: 10%;
+        }
+        .t1{
+            font-size: 180%;
+        }
+
+        .ti-sub{
+            font-size: 190%;
+            
+        }
+        .g1{
+           
+            text-align: left;
+            margin-left: 50px;
+        }
+
+        .g2{
+            align-content: right;
+            margin-right: 50px;
+        }
+        .t2{
+            margin-right: 40%;
+        }
+        .g3{
+            align-content: right;
+            margin-left: 50px;
+        }
+        .g4{
+           
+           text-align: left;
+           margin-right: 50px;
+       }
+       #previousPageLink {
+    position: absolute;
+    margin-left: 30%;
+    padding: 10px 20px;
+    margin-top: 6%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+}
+
+#previousPageLink:hover {
+    background-color: #fff;
+}
+
+#bookBtnn {
+    position: absolute;
+    margin-left: 60%;
+    padding: 10px 20px;
+    margin-top: 6%;
+    background-color:#4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+}
+
+#bookBtnn:hover {
+    background-color: #fff;
+}
+
+        
+
+    </style>
+
+
+</head>
+
+
+<body>
+    <h2 class="title"><u><label style="color:red">T</label>irupathi</h2></u>
+    <br>
+    <center class="maint1"> Tirupathi : Tirumala, located in the Eastern Ghats of Andhra Pradesh, India,
+        holds immense religious significance as the abode of Lord Venkateswara, a form of Lord Vishnu. 
+        The ancient temple of Sri Venkateswara atop Tirumala hills is a major 
+        pilgrimage site and one of the richest temples globally</center>
+
+    <div class="container">
+        <div class="g1">
+             <h2 class="t1">Tirumala Tirupati Devasthanams (TTD)</h2>
+            <label class="t1-sub">Lord Sri Venkateswara, also known as Srinivasa, Balaji, and Veṅkaṭachalapati, 
+             <br><br>made Tirumala his abode five thousand years ago. Even before him,
+             <br> <br>it was Lord Varahaswami who had made Tirumala his abode.
+             <br><br> Since then, many devotees have continued to construct grand entrances on 
+             <br><br>the ramparts of the temple over generations.</label>
+        </div>
+        <div class="g2">
+            <img src="temple.jpg" width="500px" height="250px" align="right">
+        </div>
+    </div>
+<br>
+<br>
+    <div class="container1">
+        
+                <div class="g3">
+                    <img src="zoo.jpg" width="500px" height="250px" align="left">
+                </div>
+            <div class="g4">
+                 <h2 class="t2">Sri Venkateswara Zoological Park</h2>
+                <label class="t2-sub">Also known as Tirupati Zoo, this park is located about 15 kilometers from Tirupati.
+                    <br><br>is the beautiful  S.V. Sanctuary & National Park, which have rich biodiversity. 
+                    <br><br>The habitat supports rare and endangered animals and plants, a few of them endemic
+                    <br><br> to this region.</label>
+            </div>
+    </div>
+<br>
+<br>
+<div class="container">
+        <div class="g1">
+             <h2 class="t1">Srikalahasti Temple</h2>
+            <label class="t1-sub">Located around 38 kilometers from Tirupati, Srikalahasti Temple is dedicated to 
+                <br><br>Lord Shiva and is renowned for its architecture and religious significance.his 
+                <br><br>temple is famous for Rahu-Kethu pooja. It is believed that performing this pooja 
+                <br><br>will ward the people from astrological effects of Rahu and Kethu.</label>
+        </div>
+            <div class="g2">
+                <img src="srikalahasti.png" width="500px" height="250px" align="right">
+            </div>
+</div>
+<br>
+<br>
+
+<button id="previousPageLink"></button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var previousPageLink = document.getElementById("previousPageLink");
+    var previousPageURL = "package2.html";
+
+    if (previousPageURL) {
+        var linkElement = document.createElement("a");
+        linkElement.href = previousPageURL;
+        linkElement.textContent = "previous page";
+        previousPageLink.appendChild(linkElement);
+    } else {
+        previousPageLink.textContent = "No previous page detected.";
+    }
+});
+</script>
+
+<button id="bookBtnn"><a href="pg.html">Book Now</a></button>
+
+</body>
+</html>

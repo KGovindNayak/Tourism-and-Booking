@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="t1.css" />
+    <title>IpCore Travels</title>
+</head>
+
+<body>
+
+        
+        <section class="nav-bar">
+            <div class="logo"><label>D</label>estination <label>V</label>acation</div>
+            <ul class="menu">
+                <li><a href="#">home</a></li> 
+                <li><a href="package.html">package</a></li>
+                <li><a href="#tours">tours</a></li>
+                <li><a href="#about us">about us</a></li>
+                <li><a href="#contact us">contact us</a></li>
+            </ul>
+            </div>
+        </section>
+        <section class="banner">
+        <img name="slide" width="1300px" height="620px">
+        <script>
+        var a = 0; 			// Start Point of img
+        var images = [];	// Images used as Array
+        var time = 3000;	// Time Between Switch in sec
+        	    
+        images[0] = "ayodya.jpg";
+        images[1] = "travel5.jpg";
+        images[2] = "travel6.jpg";
+        images[3] = "charminar.jpg";
+        
+        function changeImg(){
+        	document.slide.src = images[a];
+
+        
+        	if(a < images.length - 1){
+        	  
+        	  a++; 
+        	} else { 
+        
+        		a = 0;
+        	}
+        	setTimeout("changeImg()", time);
+        }      
+        window.onload=changeImg;
+        </script>
+        
+            <div class="banner-text-item">
+                <div class="banner-heading">
+                    <h1>Find your Next Destiny!</h1>
+                </div>
+                <form class="form">
+                    <input type="text" list="mylist" placeholder="Where would you like to go?">
+                    <datalist id="mylist">
+                        <option>Tirupati </option>  
+                        <option>Vizag</option>
+                        <option>Araku Valley</option>
+                        <option>Srisailam</option>
+                        <option>Papikondalu</option>
+                        <option>Vijayawada</option>  
+                        <option>Rajamundry</option>
+                        <option>Hyderabad </option>
+                        <option>Adilabad </option>
+                        <option>Bhadrachalam </option>
+                        <option>Basara </option>
+                        <option>Warangal </option>
+                        <option>Nagarjuna Sagar </option>
+                    </datalist>
+                    <input type="date" class="date">
+                    <a href="pg.html" class="book">book</a>
+                </form>
+            </div>
+        </section>
+
+  		<section id=tours>
+        <section class="services">
+             
+            <div class="service-item">
+                <img src="charminar.jpg">
+                <h2>Charminar</h2>
+            </div>
+            <div class="service-item">
+                <img src="araku.jpg">
+                <h2>Araku Valley</h2>
+            </div>
+            <div class="service-item">
+                <img src="img3.jpg">
+                <h2>Yarada Beach</h2>
+            </div>
+            <div class="service-item">
+                <img src="medaram.jpg">
+                <h2>medaram jatara</h2>
+            </div></section>
+        </section>
+
+        <section id="about us">
+        <section class="about">
+            <div class="about-img">
+                <img src="travel.jpg">
+            </div>
+            <div class="about-text">
+            
+                <small>ABOUT OUR COMPANY</small>
+                <h2>Ip Core travel Company</h2>
+                <p>we provides travel and tourism-related services
+                 to the general public on behalf of accommodation or travel 
+                 suppliers to offer different kinds of travelling packages for each destination.</p>
+
+                  <label><input type="checkbox" checked>Hyderabad</label>
+                  <label><input type="checkbox" checked>Banglore</label>
+   
+                <a href="#">ABOUT US</a>
+            </div> </section>
+        </section>
+
+      <section id="contact us">
+        <div class="footer">
+            <div class="links">
+                <h3>Services & Offers</h3>
+                <ul>
+                    <li>Festive Offers</li>
+                    <li>Best Drivers</li>
+                    <li>Luxury Vehicles</li>
+                    <li>Eco-Friendly Staff</li>
+                </ul>
+            </div>
+            
+            <div class="links">
+                <h3>Support</h3>
+                <ul>
+                    <li>Frequently Asked Questions</li>
+                    <li>Report a Payment Issue</li>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy Policy</li>
+                    <li>Call : 9088 8088 40/50</li>
+                </ul>
+            </div></section>
+        </div>
+
+
+        
+        
+        
+     <button id="nextPageButton" class="fixed-button">Arrange a Journey </button>
+     <script>
+     
+     document.addEventListener('DOMContentLoaded', function() {
+    	  var nextPageButton = document.getElementById('nextPageButton');
+
+    	  nextPageButton.addEventListener('click', function() {
+    	    // Change the URL to the desired next page
+    	    window.location.href = 'tour1.html';
+    	  });
+    	});
+     
+     </script>
+
+</html>
+</body>
+
+</html>
